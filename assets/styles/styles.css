@@ -52,39 +52,81 @@ nav {
 
 /* Work Section */
 .work-section {
-    position: relative; /* Allows positioning of the button over the GIF */
-    text-align: center;
-    padding: 0; /* Remove padding to eliminate blue background */
-    margin: 0; /* Remove any margin */
-    overflow: hidden; /* Ensures no extra space is visible */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Horizontal and vertical gap */
+    row-gap: 40px; /* Double the vertical margin */
+    padding: 50px; /* Padding around the grid */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
 }
 
-.work-section .work-gif {
-    width: 100%; /* Make the GIF fill the entire section */
+.work-item {
+    text-align: left; /* Align text to the left */
+    max-width: 100%; /* Ensure items take up full width */
+    width: 100%;
+}
+
+.work-item img {
+    width: 100%;
+    height: calc(50vh - 20px); /* Each image takes up half the viewport height minus the gap */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+    border-radius: 5px; /* Optional: Add slight rounding to images */
+}
+
+.work-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    color: #000000;
+    text-align: left; /* Align text to the left */
+    text-decoration: none; /* Remove underline by default */
+}
+
+.work-item a {
+    text-decoration: none;
+}
+
+.work-item a:hover p {
+    text-decoration: underline; /* Underline text on hover */
+}
+
+/* My Work Section (Index Page) */
+.my-work-section {
+    position: relative; /* Enable positioning for the button */
+    width: 100%; /* Ensure the section spans the full width */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove padding for a clean layout */
+}
+
+.my-work-gif {
+    width: 100%; /* Make the GIF span the full width */
     height: auto; /* Maintain aspect ratio */
-    display: block;
+    display: block; /* Ensure the GIF is treated as a block element */
 }
 
-.work-section .btn {
-    position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%);
-    padding: 30px 60px; /* Double the size of the button */
-    font-size: 24px; /* Increase font size for better visibility */
+.my-work-section .btn {
+    position: absolute; /* Position the button on top of the GIF */
+    top: 50%; /* Center the button vertically */
+    left: 50%; /* Center the button horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    padding: 30px 60px; /* Match the size of the "Contact Me" button */
+    font-size: 24px; /* Match the font size of the "Contact Me" button */
     font-weight: bold; /* Make the text bold */
-    color: #0057FF;
-    background-color: #ffffff;
-    border: none;
+    font-family: 'IBM Plex Mono', monospace; /* Use IBM Plex Mono font */
+    color: #ffffff; /* White text color */
+    background-color: #0057FF; /* Blue background */
+    border: none; /* Remove the border */
     border-radius: 50px; /* Fully rounded button */
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    z-index: 1; /* Ensure the button is above the GIF */
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.work-section .btn:hover {
-    color: #000000; /* Change text color to black */
-    background-color: #FFF600; /* Updated yellow */
+.my-work-section .btn:hover {
+    background-color: #FFF600; /* Change background to yellow on hover */
+    color: #000000; /* Change text color to black on hover */
 }
 
 /* Hello Section */
@@ -132,7 +174,7 @@ nav {
     display: flex;
     justify-content: flex-start; /* Align content to the left */
     align-items: flex-start; /* Align items to the top */
-    padding: 50px 50px; /* Add padding for spacing */
+    padding: 150px 50px; /* Add padding for spacing */
 }
 
 .about-content {
@@ -275,6 +317,50 @@ footer a {
 
 footer a:hover {
     color: #FFF600; /* Updated yellow on hover */
+}
+
+/* Project Section */
+.project-section {
+    padding: 100px 50px;
+    text-align: left; /* Align text to the left */
+}
+
+.project-section h1 {
+    font-size: 36px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.project-video video {
+    width: auto; /* Allow the width to adjust automatically */
+    height: auto; /* Allow the height to adjust automatically */
+    max-width: 100%; /* Ensure the video doesn't exceed the container width */
+    max-height: 100vh; /* Ensure the video doesn't exceed the viewport height */
+    object-fit: contain; /* Ensure the entire video fits within the player without cropping */
+    margin: 0 auto; /* Center the video horizontally */
+    display: block; /* Ensure proper centering */
+}
+
+.project-section .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px; /* Adjust padding for better size */
+    font-size: 16px;
+    font-weight: bold; /* Make the text bold */
+    font-family: 'IBM Plex Mono', monospace; /* Use IBM Plex Mono font */
+    color: #ffffff; /* White text color */
+    background-color: #0057FF; /* Blue background */
+    border: none; /* Remove the border */
+    border-radius: 50px; /* Fully rounded button */
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-section .btn:hover {
+    background-color: #FFF600; /* Change background to yellow on hover */
+    color: #000000; /* Change text color to black on hover */
 }
 
 /* Responsive Design */
