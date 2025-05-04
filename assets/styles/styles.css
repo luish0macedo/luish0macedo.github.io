@@ -364,11 +364,15 @@ footer a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     header {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        padding: 20px;
+    }
+
+    header .logo {
+        height: 80px; /* Adjust logo size */
     }
 
     nav {
@@ -376,17 +380,90 @@ footer a:hover {
         gap: 15px;
     }
 
-    .hero h1 {
-        font-size: 48px;
+    .nav-link {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .about-section {
+        flex-direction: column; /* Stack content vertically */
+        padding: 50px 20px;
+    }
+
+    .about-image {
+        max-width: 300px; /* Adjust image size */
+        margin-bottom: 20px;
+    }
+
+    .about-text h1 {
+        font-size: 48px; /* Adjust heading size */
     }
 
     .work-section {
-        padding: 50px 20px;
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 20px;
+    }
+
+    .contact-section {
+        padding: 20px;
     }
 
     footer {
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hello {
+        padding: 100px 20px;
+    }
+
+    .hello-image {
+        max-width: 90%; /* Scale image */
+    }
+
+    .hello .btn {
+        padding: 20px 40px; /* Adjust button size */
+        font-size: 18px;
+    }
+
+    .my-work-section .btn {
+        padding: 20px 40px; /* Adjust button size */
+        font-size: 18px;
+    }
+
+    .project-section h1 {
+        font-size: 28px; /* Adjust heading size */
+    }
+
+    .project-video video {
+        max-width: 100%; /* Ensure video scales properly */
+        max-height: 60vh; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link {
+        font-size: 16px; /* Further reduce font size */
+    }
+
+    .about-text h1 {
+        font-size: 36px; /* Adjust heading size */
+    }
+
+    .about-text p {
+        font-size: 14px; /* Adjust paragraph size */
+    }
+
+    .hello .btn,
+    .my-work-section .btn {
+        padding: 15px 30px; /* Smaller buttons */
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 12px; /* Adjust footer text size */
     }
 }
