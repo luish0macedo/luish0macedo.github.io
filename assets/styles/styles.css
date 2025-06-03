@@ -18,6 +18,18 @@ main {
     flex: 1; /* Push the footer to the bottom */
 }
 
+#email_container 
+{
+  display: inline-block;
+}
+
+#email_container button 
+{
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+}
+
 /* Header */
 header {
     position: relative;
@@ -35,7 +47,7 @@ header {
   }
 
 header .logo {
-    height: 120px; /* Larger logo size */
+    height: 6vw; /* Responsive logo size based on viewport width */
     filter: invert(1); /* Make the logo white */
 }
 
@@ -55,6 +67,50 @@ nav {
 .nav-link:hover {
     color: #FFF600; /* Updated yellow */
     text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Hello Section */
+.hello {
+    text-align: center;
+    padding: 150px 20px; /* Maintain padding for responsiveness */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    position: relative;
+}
+
+.hello-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 40px; /* Space between the image and the button */
+    position: relative;
+    top: -100px; /* Move the image further up */
+}
+
+.hello .btn {
+    display: inline-block;
+    padding: 30px 60px; /* Double the size of the button */
+    font-size: 24px; /* Increase font size for better visibility */
+    font-weight: bold; /* Make the text bold */
+    color: #ffffff;
+    background-color: #0057FF;
+    border: none;
+    border-radius: 50px; /* Fully rounded button */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    top: -80px; /* Move the button further up */
+}
+
+.hello .btn:hover {
+    color: #000000; /* Change text color to black */
+    background-color: #FFF600; /* Updated yellow */
 }
 
 /* My Work Section */
@@ -131,46 +187,6 @@ nav {
     text-decoration: underline;
 }
 
-/* Hello Section */
-.hello {
-    text-align: center;
-    padding: 150px 20px; /* Maintain padding for responsiveness */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Full viewport height */
-    position: relative;
-}
-
-.hello-image {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 40px; /* Space between the image and the button */
-    position: relative;
-    top: -100px; /* Move the image further up */
-}
-
-.hello .btn {
-    display: inline-block;
-    padding: 30px 60px; /* Double the size of the button */
-    font-size: 24px; /* Increase font size for better visibility */
-    font-weight: bold; /* Make the text bold */
-    color: #ffffff;
-    background-color: #0057FF;
-    border: none;
-    border-radius: 50px; /* Fully rounded button */
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    position: relative;
-    top: -80px; /* Move the button further up */
-}
-
-.hello .btn:hover {
-    color: #000000; /* Change text color to black */
-    background-color: #FFF600; /* Updated yellow */
-}
-
 /* About Section */
 .about-section {
     display: flex;
@@ -205,94 +221,12 @@ nav {
 
 .about-text h1 {
     font-size: 72px; /* Larger font size for the name */
-    font-weight: bold;
-    margin-bottom: 176px; /* Push the rest of the text down */
+    font-weight: bold;  
+    margin-bottom: 39vh; /* Push the rest of the text down */
 }
 
 .about-text p {
     margin-bottom: 20px; /* Add spacing between paragraphs */
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 100px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-form {
-    width: 100%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.form-group label {
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.form-group span {
-    font-size: 14px;
-    color: #666666;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    font-family: 'IBM Plex Mono', monospace; /* Ensure the correct font is applied */
-    border: none; /* Remove the borders */
-    border-radius: 0;
-    outline: none;
-    background-color: #ffffff; /* Optional: Ensure a clean background */
-    color: #000000; /* Ensure the text color is black */
-}
-
-/* Placeholder Styling */
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    font-family: 'IBM Plex Mono', monospace; /* Ensure the correct font is applied */
-    font-size: 16px; /* Match the input font size */
-    color: #999999; /* Placeholder color */
-}
-
-.form-group input[type="text"] {
-    display: inline-block;
-    width: calc(50% - 10px);
-    margin-right: 10px;
-}
-
-.form-group input[type="text"]:last-child {
-    margin-right: 0;
-}
-
-.submit-btn {
-    align-self: flex-start;
-    padding: 15px 30px; /* Adjust padding for better size */
-    font-size: 16px;
-    font-weight: bold; /* Make the text bold */
-    font-family: 'IBM Plex Mono', monospace; /* Use IBM Plex Mono font */
-    color: #ffffff; /* White text color */
-    background-color: #0057FF; /* Blue background */
-    border: none; /* Remove the border */
-    border-radius: 25px; /* Rounded corners */
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #FFF600; /* Change background to yellow on hover */
-    color: #000000; /* Change text color to black on hover */
 }
 
 /* Footer */
@@ -365,55 +299,171 @@ footer a:hover {
     color: #000000; /* Change text color to black on hover */
 }
 
+/* Project Images Grid */
+.project-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.project-images-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    object-fit: cover;
+    cursor: pointer; /* Make images in the project grid show pointer cursor on hover */
+}
+
+/* Custom grid for Bestiary of Fear project */
+.project-images-custom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+    align-items: start;
+}
+
+.left-image img {
+    width: 102%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.right-images {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.right-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Project Description */
+.project-description {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #222;
+}
+
+/* Lightbox styles */
+.lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #FFF;
+    font-size: 48px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     header {
         flex-direction: column;
         align-items: center;
         padding: 20px;
+        height: 200px;
+        background-image: none;
     }
 
     header .logo {
-        height: 80px; /* Adjust logo size */
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
+        height: 16vh; /* Adjust logo size */
+        background-color: #FFA800;
+        border-radius: 100%;
     }
 
     .nav-link {
-        font-size: 18px; /* Adjust font size for smaller screens */
+        font-size: 30px; /* Adjust font size for smaller screens */
+        font-weight: bold;
+        color:#0057FF;
     }
 
-    .about-section {
-        flex-direction: column; /* Stack content vertically */
-        padding: 50px 20px;
-    }
-
-    .about-image {
-        max-width: 300px; /* Adjust image size */
-        margin-bottom: 20px;
-    }
-
-    .about-text h1 {
-        font-size: 48px; /* Adjust heading size */
-    }
+    .work-header {
+    mix-blend-mode: normal;
+}
 
     .work-section {
         grid-template-columns: 1fr; /* Single column layout */
-        padding: 20px;
+        padding: 100px 40px 100px 40px;
+        gap: 200px;
+    }
+    .work-item {
+        grid-template-columns: 1fr;
     }
 
-    .contact-section {
-        padding: 20px;
+    .menu-toggle {
+        display: block;
+        color:#0057FF;
+        background: none;
+        border: none;
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 10001;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 30px;
+        background: #FFFFFF;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        padding: 40px 0 40px 0;
+        z-index: 10000;
+        align-items: center;
+    }
+    
+    nav.active {
+        display: flex;
     }
 
     footer {
         flex-direction: column;
-        text-align: center;
-        gap: 20px;
+        font-size: 20px;
+        gap: 60px;
         padding: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .project-images-custom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .right-images img {
+        width: 100%;
     }
 }
 
@@ -424,11 +474,6 @@ footer a:hover {
 
     .hello-image {
         max-width: 90%; /* Scale image */
-    }
-
-    .hello .btn {
-        padding: 20px 40px; /* Adjust button size */
-        font-size: 18px;
     }
 
     .my-work-section .btn {
@@ -444,11 +489,13 @@ footer a:hover {
         max-width: 100%; /* Ensure video scales properly */
         max-height: 60vh; /* Adjust height for smaller screens */
     }
+    
 }
 
 @media (max-width: 480px) {
-    .nav-link {
-        font-size: 16px; /* Further reduce font size */
+    .hello .btn {
+        padding: 20px 40px; /* Adjust button size */
+        font-size: 18px;
     }
 
     .about-text h1 {
@@ -457,15 +504,5 @@ footer a:hover {
 
     .about-text p {
         font-size: 14px; /* Adjust paragraph size */
-    }
-
-    .hello .btn,
-    .my-work-section .btn {
-        padding: 15px 30px; /* Smaller buttons */
-        font-size: 16px;
-    }
-
-    footer {
-        font-size: 12px; /* Adjust footer text size */
     }
 }

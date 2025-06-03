@@ -5,15 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 02 — Luís Macedo</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <script src="../assets/scripts/lightbox.js" defer></script>
 </head>
 
 <body>
-    <a href="../index.html" target="_self"><img src="../assets/images/LOGO2025.svg" alt="Luís Macedo Logo" width="100" height="100"/></a>
-    <a href="../work.html" target="_self">Work</a>
-    <a href="../about.html" target="_self">Who am I?</a>
-    <a href="../contact.html" target="_self">Contacts</a>
-    <a href="project1.html" target="_self">Project 01</a>
-    <a href="project2.html" target="_self">Project 02</a>
-</body>
+    <header>
+        <a href="../index.html"><img src="../assets/images/LOGO2025.svg" alt="Luís Macedo Logo" class="logo"></a>
+        <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+        <nav>
+            <a href="../work.html" class="nav-link">Work</a>
+            <a href="../about.html" class="nav-link">Who am I?</a>
+        </nav>
+    </header>
 
+    <main class="project-section">
+        <h1>Music Posters</h1>
+        <p class="project-description">
+            A collection of music posters inspired by songs and artists I enjoy, created to practice and explore graphic design techniques. I used digital image collage and hand-drawn elements. These posters were then printed and displayed in the 2025 Finalists Exhibition at ESAD.cr.
+        </p>
+        <div class="project-images-grid">
+            <img src="../assets/images/LUTHER.jpg" alt="LUTHER Poster">
+            <img src="../assets/images/IGOR.png" alt="IGOR Poster">
+            <img src="../assets/images/LIKE HIM.png" alt="LIKE HIM Poster">
+            <img src="../assets/images/90210.png" alt="90210 Poster">
+        </div>
+        <a href="../work.html" class="btn">Back to Work</a>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>Luís Macedo<br>Guimarães, Portugal<br>2025</p>
+        </div>
+        <div class="footer-center">
+            <p>Find me at<br>
+                <a href="https://www.instagram.com/luish.0/" target="_blank">Instagram</a><br>
+                <a href="https://www.behance.net/luismacedo21" target="_blank">Behance</a>
+            </p>
+        </div>
+        <div class="footer-right">
+            <p>Contact<br>
+                <a href="mailto:luis.h0.macedo@gmail.com">luis.h0.macedo@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+    <div id="lightbox" class="lightbox" style="display:none;">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" src="" alt="Fullscreen Poster">
+    </div>
+    <script src="../assets/scripts/menu.js" defer></script>
+</body>
 </html>
