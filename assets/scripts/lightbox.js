@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Select images from both .project-images-grid and .project-images-custom-grid
+    // Pega nas imagens dos projetos e adiciona uma lightbox das mesmas quando clicadas
     const images = document.querySelectorAll('.project-images-grid img, .project-images-custom-grid img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.querySelector('.lightbox-img');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         lightboxImg.src = '';
     });
 
-    // Also close when clicking outside the image
+    // Também fecha a lightbox ao clicar fora da imagem
     lightbox.addEventListener('click', function (e) {
         if (e.target === lightbox) {
             lightbox.style.display = 'none';

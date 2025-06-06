@@ -1,3 +1,5 @@
+//Função para copiar o email para a área de transferência (p5.js)
+
 let email_container_element, email_a_element, email_button_element;
 let temp_input;
 
@@ -10,7 +12,7 @@ function setup()
   
   email_a_element = select ("#email");
   
-  email_button_element = createButton ("Copy Email");
+  email_button_element = createButton ("COPY EMAIL");
   email_button_element.parent (email_container_element);
   email_button_element.hide();
   email_button_element.mousePressed (copyEmail);

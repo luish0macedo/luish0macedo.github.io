@@ -11,26 +11,45 @@ body {
     color: #000000;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    min-height: 100vh; /* Garante que o body ocupa toda a altura da janela */
 }
 
 main {
-    flex: 1; /* Push the footer to the bottom */
+    flex: 1; /* Empurra o footer para o fundo */
 }
 
+/* Container do email */
 #email_container 
 {
   display: inline-block;
 }
 
+/* Botão do email */
 #email_container button 
 {
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 80%;
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 10px 20px;
+    font-size: 14px; 
+    font-weight: bold;
+    color: #0057FF;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
-/* Header */
+/* Hover do botão do email */
+#email_container button:hover 
+{
+    color: #000000;
+    background-color: #FFF600;
+}
+
+/* Cabeçalho */
 header {
     position: relative;
     height: 200px;
@@ -40,159 +59,175 @@ header {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    background-image: url("../images/header-bg.svg");
+    background-image: url("../images/header-bg.svg"); /* Imagem de fundo do cabeçalho */
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
-  }
-
-header .logo {
-    height: 6vw; /* Responsive logo size based on viewport width */
-    filter: invert(1); /* Make the logo white */
 }
 
+/* Logo no cabeçalho */
+header .logo {
+    height: 6vw;
+    filter: invert(1); /* Torna o logo branco */
+}
+
+/* Navbar */
 nav {
     display: flex;
-    gap: 60px; /* Increased space between navigation links */
+    gap: 60px; /* Espaço aumentado entre os links da navbar */
     margin-bottom: 12px;
 }
 
+/* Links da navbar */
 .nav-link {
     text-decoration: none;
     color: #ffffff;
-    font-size: 20px; /* Slightly larger font size for better visibility */
+    font-size: 20px;
     transition: color 0.3s, text-decoration 0.3s;
 }
 
+/* Hover nos links da navbar */
 .nav-link:hover {
-    color: #FFF600; /* Updated yellow */
+    color: #FFF600;
     text-decoration: underline;
 }
 
+/* Botão do menu hamburguer (escondido por defeito) */
 .menu-toggle {
     display: none;
 }
 
-/* Hello Section */
+/* "Hello I'm Luis" */
 .hello {
     text-align: center;
-    padding: 150px 20px; /* Maintain padding for responsiveness */
+    padding: 150px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh; /* Ocupa toda a altura da janela */
     position: relative;
 }
 
+/* Imagem da secção "Hello I'm Luis" */
 .hello-image {
     max-width: 100%;
     height: auto;
-    margin-bottom: 40px; /* Space between the image and the button */
     position: relative;
-    top: -100px; /* Move the image further up */
+    top: -100px; /* Move a imagem para cima */
 }
 
+/* Botão "MY WORK" */
 .hello .btn {
     display: inline-block;
-    padding: 30px 60px; /* Double the size of the button */
-    font-size: 24px; /* Increase font size for better visibility */
-    font-weight: bold; /* Make the text bold */
+    padding: 30px 60px;
+    font-size: 24px;
+    font-weight: bold;
     color: #ffffff;
     background-color: #0057FF;
     border: none;
-    border-radius: 50px; /* Fully rounded button */
+    border-radius: 50px;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
     position: relative;
-    top: -80px; /* Move the button further up */
 }
 
+/* Hover do botão "MY WORK" */
 .hello .btn:hover {
-    color: #000000; /* Change text color to black */
-    background-color: #FFF600; /* Updated yellow */
+    color: #000000; /* Muda a cor do texto para preto */
+    background-color: #FFF600; /* Amarelo atualizado */
 }
 
-/* My Work Section */
+/* Secção "My Work" */
 .my-work-section {
-    position: relative; /* Position the section relative to the document flow */
-    margin-top: -200px; /* Add space below the header (adjust based on header height) */
-    width: 100%; /* Ensure the section spans the full width */
-    height: auto; /* Allow the height to adjust based on content */
-    z-index: -1; /* Ensure it appears above the background */
+    position: relative;
+    margin-top: -200px; /* Deixa o gif no topo */
+    width: 100%; /* Ocupa toda a largura */
+    height: auto;
+    z-index: -1; /* Garante que aparece acima do fundo */
 }
 
+/* GIF da secção "My Work" */
 .my-work-gif {
-    width: 100%; /* Make the GIF span the full width */
-    height: auto; /* Adjust height proportionally */
-    object-fit: cover; /* Ensure the GIF covers the section without distortion */
-    display: block; /* Ensure the GIF is treated as a block element */
+    width: 100%; /* GIF ocupa toda a largura */
+    height: auto;
+    object-fit: cover; /* Garante que o gif cobre a secção sem distorção */
+    display: block;
 }
 
-/* Work Section */
+/* Secção dos trabalhos */
 .work-section {
     display: grid;
-    gap: 40px; /* Space between work items */
+    gap: 40px; /* Espaço entre os itens de trabalho */
     padding: 50px;
 }
 
+/* Cabeçalho da página work */
 .work-header {
     background-image: none;
     mix-blend-mode: difference;
 }
 
+/* Trabalhos */
 .work-item {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
     align-items: center;
-    gap: 20px; /* Space between image and text */
+    gap: 20px; /* Espaço entre imagem e texto */
 }
 
+/* Imagens dos trabalhos */
 .work-item img {
     width: 100%;
     height: auto;
-    border-radius: 5px; /* Optional: Add slight rounding to images */
-    object-fit: cover; /* Ensure the image covers its container */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    border-radius: 5px;
+    object-fit: cover; /* Garante que a imagem cobre o container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra subtil */
 }
 
+/* Hover nas imagens dos trabalhos */
 .work-item img:hover {
     filter: brightness(1.2);
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    transition: all 0.3s ease;
 }
 
+/* Textos dos trabalhos */
 .work-text {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
     color: #000000;
 }
 
+/* Títulos dos trabalhos */
 .work-text h2 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* P dos trabalhos */
 .work-text p {
     font-size: 16px;
     line-height: 1.5;
 }
 
+/* Limpar a decoração do link */
 .work-text a {
     text-decoration: none;
     color:#000000;
 }
 
+/* Underline nos textos quando em hover */
 .work-text a:hover {
     text-decoration: underline;
 }
 
-/* About Section */
+/* About */
 .about-section {
     display: flex;
-    justify-content: flex-start; /* Align content to the left */
-    align-items: flex-start; /* Align items to the top */
-    padding: 80px 50px; /* Add padding for spacing */
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    padding: 80px 50px;
 }
 
 .about-content {
@@ -204,39 +239,42 @@ nav {
 }
 
 .about-image {
-    max-width: 600px; /* Adjust image size */
+    max-width: 600px; /* Tamanho máximo da imagem */
     width: 100%;
     height: auto;
-    margin-right: 20px; /* Add spacing between the image and text */
+    margin-right: 20px; /* Espaço entre imagem e texto */
 }
 
+/* Textos do About */
 .about-text {
     max-width: 500px;
     width: 100%;
     font-size: 14px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Align name to the top and the rest to the bottom */
+    justify-content: space-between; /* Nome em cima, resto em baixo */
 }
 
+/* Nome */
 .about-text h1 {
-    font-size: 72px; /* Larger font size for the name */
+    font-size: 72px;
     font-weight: bold;  
-    margin-bottom: 39vh; /* Push the rest of the text down */
+    margin-bottom: 39vh; /* Empurra o resto do texto para baixo */
 }
 
+/* Texto */
 .about-text p {
-    margin-bottom: 20px; /* Add spacing between paragraphs */
+    margin-bottom: 20px; /* Espaço entre parágrafos */
 }
 
-/* Footer */
+/* Rodapé */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 40px 50px; /* Increased padding for spacing */
-    background-color: #0057FF; /* Blue background */
-    color: #ffffff; /* White text */
+    padding: 40px 50px;
+    background-color: #0057FF;
+    color: #ffffff;
     font-size: 14px;
     width: 100%;
 }
@@ -245,22 +283,24 @@ footer div {
     flex: 1;
 }
 
+/* Links no rodapé */
 footer a {
-    text-decoration: underline; /* Ensure links are underlined */
-    color: #ffffff; /* White links */
+    color: #ffffff;
     transition: color 0.3s;
 }
 
+/* Hover nos links do rodapé */
 footer a:hover {
-    color: #FFF600; /* Updated yellow on hover */
+    color: #FFF600;
 }
 
-/* Project Section */
+/* Secção dos projetos (páginas dos projetos) */
 .project-section {
     padding: 100px 50px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
+/* Títulos dos projetos */
 .project-section h1 {
     font-size: 36px;
     font-family: 'IBM Plex Mono', monospace;
@@ -268,38 +308,41 @@ footer a:hover {
     margin-bottom: 40px;
 }
 
+/* Vídeo do projeto */
 .project-video video {
-    width: auto; /* Allow the width to adjust automatically */
-    height: auto; /* Allow the height to adjust automatically */
-    max-width: 100%; /* Ensure the video doesn't exceed the container width */
-    max-height: 100vh; /* Ensure the video doesn't exceed the viewport height */
-    object-fit: contain; /* Ensure the entire video fits within the player without cropping */
-    margin: 0 auto; /* Center the video horizontally */
-    display: block; /* Ensure proper centering */
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Não excede a largura do container */
+    max-height: 100vh; /* Não excede a altura da janela */
+    object-fit: contain; /* Garante que o vídeo cabe sem cortar */
+    margin: 0 auto; /* Centra o vídeo horizontalmente */
+    display: block; /* Garante o centramento */
 }
 
+/* Botão pra voltar */
 .project-section .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 30px; /* Adjust padding for better size */
+    padding: 15px 30px;
     font-size: 16px;
-    font-weight: bold; /* Make the text bold */
-    font-family: 'IBM Plex Mono', monospace; /* Use IBM Plex Mono font */
-    color: #ffffff; /* White text color */
-    background-color: #0057FF; /* Blue background */
-    border: none; /* Remove the border */
-    border-radius: 50px; /* Fully rounded button */
+    font-weight: bold;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #ffffff;
+    background-color: #0057FF;
+    border: none; 
+    border-radius: 50px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
+/* Hover no botão de voltar */
 .project-section .btn:hover {
-    background-color: #FFF600; /* Change background to yellow on hover */
-    color: #000000; /* Change text color to black on hover */
+    background-color: #FFF600;
+    color: #000000;
 }
 
-/* Project Images Grid */
+/* Grelha das imagens dos projetos */
 .project-images-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -307,16 +350,17 @@ footer a:hover {
     margin: 40px 0;
 }
 
+/* Imagens dos projetos */
 .project-images-grid img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     object-fit: cover;
-    cursor: pointer; /* Make images in the project grid show pointer cursor on hover */
+    cursor: pointer; /* Mostra cursor de clique nas imagens */
 }
 
-/* Custom grid for Bestiary of Fear project */
+/* Grelha personalizada para o projeto "Bestiary of Fear - Zine" */
 .project-images-custom-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -325,6 +369,7 @@ footer a:hover {
     align-items: start;
 }
 
+/* Imagem à esquerda na grelha personalizada */
 .left-image img {
     width: 102%;
     height: auto;
@@ -334,6 +379,7 @@ footer a:hover {
     cursor: pointer;
 }
 
+/* Imagens à direita na grelha personalizada */
 .right-images {
     display: flex;
     flex-direction: column;
@@ -349,14 +395,14 @@ footer a:hover {
     cursor: pointer;
 }
 
-/* Project Description */
+/* Descrição do projeto */
 .project-description {
     margin-top: 20px;
     font-size: 18px;
     color: #222;
 }
 
-/* Lightbox styles */
+/* Estilos do lightbox */
 .lightbox {
     position: fixed;
     top: 0; left: 0;
@@ -383,7 +429,7 @@ footer a:hover {
     z-index: 10000;
 }
 
-/* Responsive Design */
+/* Design Responsivo */
 @media (max-width: 1024px) {
     header {
         flex-direction: column;
@@ -394,23 +440,24 @@ footer a:hover {
     }
 
     header .logo {
-        height: 16vh; /* Adjust logo size */
+        height: 16vh;
         background-color: #FFA800;
         border-radius: 100%;
     }
 
     .nav-link {
-        font-size: 30px; /* Adjust font size for smaller screens */
+        font-size: 30px;
         font-weight: bold;
         color:#0057FF;
     }
 
+    /* Remove o efeito presente no header na pag. work */
     .work-header {
-    mix-blend-mode: normal;
-}
+        mix-blend-mode: normal;
+    }
 
     .work-section {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr; /* Layout de uma coluna */
         padding: 100px 40px 100px 40px;
         gap: 200px;
     }
@@ -418,6 +465,7 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
+    /* Menu da navbar */
     .menu-toggle {
         display: block;
         color:#0057FF;
@@ -473,36 +521,36 @@ footer a:hover {
     }
 
     .hello-image {
-        max-width: 90%; /* Scale image */
+        max-width: 90%;
     }
 
     .my-work-section .btn {
-        padding: 20px 40px; /* Adjust button size */
+        padding: 20px 40px;
         font-size: 18px;
     }
 
     .project-section h1 {
-        font-size: 28px; /* Adjust heading size */
+        font-size: 28px;
     }
 
     .project-video video {
-        max-width: 100%; /* Ensure video scales properly */
-        max-height: 60vh; /* Adjust height for smaller screens */
+        max-width: 100%; /* Garante que o vídeo escala corretamente */
+        max-height: 60vh; /* Ajusta a altura para ecrãs pequenos */
     }
     
 }
 
 @media (max-width: 480px) {
     .hello .btn {
-        padding: 20px 40px; /* Adjust button size */
+        padding: 20px 40px; 
         font-size: 18px;
     }
 
     .about-text h1 {
-        font-size: 36px; /* Adjust heading size */
+        font-size: 36px; 
     }
 
     .about-text p {
-        font-size: 14px; /* Adjust paragraph size */
+        font-size: 14px;
     }
 }

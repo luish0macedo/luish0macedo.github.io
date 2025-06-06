@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who Am I? — Luís Macedo</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
+    <script src="assets/scripts/email.js"></script>
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 
@@ -44,7 +46,9 @@
         </div>
         <div class="footer-right">
             <p>Contact<br>
-                <a href="mailto:luis.h0.macedo@gmail.com">luis.h0.macedo@gmail.com</a>
+                <div id="email_container" onmouseover="showEmailButton()" onmouseout="hideEmailButton()">
+                <a id="email" href="mailto:luis.h0.macedo@gmail.com">luis.h0.macedo@gmail.com</a>
+                </div>
             </p>
         </div>
     </footer>
