@@ -135,8 +135,8 @@ nav {
 
 /* Hover do botão "MY WORK" */
 .hello .btn:hover {
-    color: #000000; /* Muda a cor do texto para preto */
-    background-color: #FFF600; /* Amarelo atualizado */
+    color: #000000;
+    background-color: #FFF600;
 }
 
 /* Secção "My Work" */
