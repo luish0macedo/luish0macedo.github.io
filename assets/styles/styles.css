@@ -39,7 +39,7 @@ main {
     transition: background-color 0.3s, color 0.3s;
     position: relative;
     margin-top: 10px;
-    cursor: pointer;
+    cursor: pointer; /* Muda o cursor para "clicável" quando apontamos para o botão */
 }
 
 /* Hover do botão do email */
@@ -111,10 +111,10 @@ nav {
 
 /* Imagem da secção "Hello I'm Luis" */
 .hello-image {
-    max-width: 100%;
+    max-width: 650px;
     height: auto;
     position: relative;
-    top: -100px; /* Move a imagem para cima */
+    top: -150px; /* Empurra a imagem para cima */
 }
 
 /* Botão "MY WORK" */
@@ -130,6 +130,7 @@ nav {
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
     position: relative;
+    top: -80px; /* Empurra o botão para cima */
 }
 
 /* Hover do botão "MY WORK" */
@@ -503,6 +504,20 @@ footer a:hover {
         gap: 60px;
         padding: 20px;
     }
+
+    .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Nome */
+    .about-text h1 {
+    font-size: 48px; 
+    margin-bottom: 2vh; /* Junta o texto */
+}
 }
 
 @media (max-width: 900px) {
@@ -537,6 +552,16 @@ footer a:hover {
         max-width: 100%; /* Garante que o vídeo escala corretamente */
         max-height: 60vh; /* Ajusta a altura para ecrãs pequenos */
     }
+
+    .about-image {
+    max-width: 450px; /* Tamanho máximo da imagem */
+    margin-bottom: 20px;
+    }
+
+    /* Textos do About */
+    .about-text {
+    max-width: 450px;
+}
     
 }
 
@@ -549,6 +574,15 @@ footer a:hover {
     .about-text h1 {
         font-size: 36px; 
     }
+
+    .about-image {
+    max-width: 300px; /* Tamanho máximo da imagem */
+    }
+
+    /* Textos do About */
+    .about-text {
+    max-width: 300px;
+}
 
     .about-text p {
         font-size: 14px;
