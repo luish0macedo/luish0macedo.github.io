@@ -1,3 +1,4 @@
+//Luís Macedo | 3220554 | Portfolio | 3º 2024/2025 | 2º semestre | Laboratório de Projeto II | Design Gráfico e Multimédia | ESAD.CR | Professor Marco Heleno | 09-06-2025
 //Função para copiar o email para a área de transferência (p5.js)
 
 let email_container_element, email_a_element, email_button_element;
