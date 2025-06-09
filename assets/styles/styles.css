@@ -268,6 +268,26 @@ nav {
     margin-bottom: 20px; /* Espaço entre parágrafos */
 }
 
+.about-section .btn {
+    margin-bottom: 20px;
+    padding: 15px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #ffffff;
+    background-color: #0057FF;
+    border: none; 
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.about-section .btn:hover {
+    background-color: #FFF600;
+    color: #000000;
+}
+
 /* Rodapé */
 footer {
     display: flex;
